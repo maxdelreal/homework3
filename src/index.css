@@ -1,0 +1,122 @@
+/*Page defaults */
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f1f1f1;
+}
+
+/*Dark banner */
+
+.banner {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.banner h1 {
+    margin: 0;
+    font-size: 60px;
+}
+
+/*  Search + sort bar*/
+
+.controls {
+    background-color: #34495e;
+    padding: 20px;
+
+    /* Flexbox centers the two controls side by side */
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#search-input,
+#sort-select {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: white;
+}
+
+#search-input {
+    width: 280px;
+}
+
+/* Movie grid */
+
+.movie-grid {
+    /* auto-fill + minmax = as many 220px-wide columns as fit the screen */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.movie-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    text-align: center;
+}
+
+.movie-card img {
+    width: 100%;
+    border-radius: 6px;
+    display: block;
+}
+
+.movie-card h3 {
+    font-size: 24px;
+    margin: 15px 0;
+}
+
+.movie-card p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+/* Pagination */
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: #2c3e50;
+    color: white;
+    cursor: pointer;
+}
+
+.pagination button:hover {
+    background-color: #34495e;
+}
+
+/* Greys out Previous on page 1 and Next on the last page */
+.pagination button:disabled {
+    background-color: #a0a0a0;
+    cursor: not-allowed;
+}
+
+#page-info {
+    font-size: 18px;
+}
+
+/* Message shown when a search finds nothing */
+
+.message {
+    text-align: center;
+    font-size: 20px;
+    padding: 40px;
+}
